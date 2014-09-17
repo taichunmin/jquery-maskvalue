@@ -11,7 +11,6 @@
 
 		return this.filter(':text[name]').each(function(){
 			var $this = $(this);
-			console.log($this);
 			if( !!$this.data('maskvalue') )
 				return true;
 			var $shadow = $('<input type="text" class="maskvalue-shadow" readonly />').val( settings.maskfunc.call( $this ) ).data( 'maskvalue', $this ).insertAfter( $this );
